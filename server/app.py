@@ -10,7 +10,8 @@ from dotenv import load_dotenv  # Load environment variables from .env file
 load_dotenv()  # Load environment variables
 
 app = Flask(__name__)
-CORS(app)  # This will allow all origins by default
+CORS(app, resources={r"/api/*": {"origins": "https://https://auth-hash-website.vercel.app/"}})
+  # This will allow all origins by default
 
 PEPPER = os.getenv('PEPPER')  # Get pepper from environment variable
 

@@ -23,7 +23,7 @@ const Login = ({ setUser }) => {
     e.preventDefault();
     setLoading(true); // Start spinner when login is clicked
     try {
-      const response = await axios.post('${process.env.REACT_APP_BACKEND_URL}/api/login', { email, password });
+      const response = await axios.post('${process.env.http://auth4hash.lovestoblog.com/}/api/login', { email, password });
       const { user } = response.data;
       setUser(user); // Now stores the user data
       toast.success("Login successful!");
