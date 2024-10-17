@@ -17,10 +17,10 @@ PEPPER = os.getenv('PEPPER')  # Get pepper from environment variable
 # MySQL connection setup
 def create_connection():
     return mysql.connector.connect(
-        host='localhost',
-        user='root',
-        password='',  # replace with your MySQL password
-        database='user_account'  # replace with your database name
+        host='sql112.infinityfree.com',
+        user='if0_37529564_XXX',
+        password='Auth4Hash',  # replace with your MySQL password
+        database='if0_37529564_user_account'  # replace with your database name
     )
 
 # Password validation function
@@ -34,7 +34,7 @@ def is_strong_password(password):
     return False
 
 # Signup route
-@app.route('/signup', methods=['POST'])
+@app.route('/api/signup', methods=['POST'])
 def signup():
     try:
         conn = create_connection()
@@ -70,7 +70,7 @@ def signup():
             conn.close()
 
 # Login route
-@app.route('/login', methods=['POST'])
+@app.route('/api/login', methods=['POST'])
 def login():
     try:
         conn = create_connection()
