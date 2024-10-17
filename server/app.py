@@ -10,18 +10,17 @@ from dotenv import load_dotenv  # Load environment variables from .env file
 load_dotenv()  # Load environment variables
 
 app = Flask(__name__)
-CORS(app, resources={r"/api/*": {"origins": "https://https://auth-hash-website.vercel.app/"}})
-  # This will allow all origins by default
+CORS(app)  # This will allow all origins by default
 
 PEPPER = os.getenv('PEPPER')  # Get pepper from environment variable
 
 # MySQL connection setup
 def create_connection():
     return mysql.connector.connect(
-        host='sql112.infinityfree.com',
-        user='if0_37529564_XXX',
-        password='Auth4Hash',  # replace with your MySQL password
-        database='if0_37529564_user_account'  # replace with your database name
+        host='localhost',
+        user='root',
+        password='',  # replace with your MySQL password
+        database='user_account'  # replace with your database name
     )
 
 # Password validation function
@@ -35,7 +34,7 @@ def is_strong_password(password):
     return False
 
 # Signup route
-@app.route('/api/signup', methods=['POST'])
+@app.route('/signup', methods=['POST'])
 def signup():
     try:
         conn = create_connection()
@@ -71,7 +70,7 @@ def signup():
             conn.close()
 
 # Login route
-@app.route('/api/login', methods=['POST'])
+@app.route('/login', methods=['POST'])
 def login():
     try:
         conn = create_connection()
