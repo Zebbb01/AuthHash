@@ -1,0 +1,10 @@
+
+.error-message {
+  color: rgb(196, 8, 8);
+  font-size: 14px;
+  margin-top: 5px; /* Ensure it doesn't push the icon or input down */
+  position: absolute;
+  bottom: -13px; /* Position the error message just below the input */
+  left: 0;
+  width: 100%; /* Span across the width of the container */
+}

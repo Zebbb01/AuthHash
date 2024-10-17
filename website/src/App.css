@@ -1,0 +1,148 @@
+/* Custom toast notification styles for better text fit */
+.toast-container-custom .Toastify__toast {
+  background-color: #A67B5B; /* Match your app's background color */
+  color: #FED8B1;            /* Text color to fit the theme */
+  font-size: 16px;           /* Adjust font size for readability */
+  border-radius: 8px;        /* Add rounded corners */
+  padding: 15px;
+  width: 100%;             /* Add padding for better spacing */
+  box-shadow: 0 2px 10px #0000004d; /* Add shadow for depth */
+  display: flex;             /* Flexbox for better alignment */
+  align-items: center;       /* Center the content vertically */
+  justify-content: space-between; /* Spread icon, text, and button */
+}
+
+.toast-container-custom .Toastify__toast-icon {
+  color: #4CAF50; /* Change icon color to a green check mark */
+  margin-right: 10px; /* Add some space between the icon and text */
+}
+
+.toast-container-custom .Toastify__close-button {
+  color: #FED8B1;          /* Change the color of the close button */
+  font-size: 12px;         /* Reduce the font size to make it smaller */
+  margin-left: 10px;       /* Add space between text and close button */
+  padding: 4px 8px;        /* Adjust padding for a more compact close button */
+  line-height: 1;          /* Ensure the close button is compact */
+  height: auto;            /* Allow button to resize properly */
+  width: auto;             /* Remove width constraint */
+}
+
+.App-header {
+  background-color: #6F4E37;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #FED8B1;
+}
+
+.form-container {
+  background-color: #A67B5B;
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Make width 100% initially */
+  max-width: 300px; /* Limit the width to 300px on larger screens */
+  margin: 0 auto;
+  border-radius: 6px;
+  padding: 30px 50px; /* Adjust padding to allow better fit on smaller screens */
+  padding-bottom: 60px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.password-input {
+  position: relative;
+}
+
+input {
+  margin: 10px 0;
+  padding: 10px 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  transition: border-color 0.3s ease;
+  width: 100%; /* Ensure input takes full width of the container */
+  box-sizing: border-box;
+}
+
+input:focus {
+  border-color: #007bff;
+}
+
+.eye-icon {
+  font-size: 25px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #ECB176;
+  z-index: 2; /* Ensure it stays above other elements */
+}
+
+button {
+  padding: 10px;
+  background-color: #ECB176;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  color: #6F4E37;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+  width: 100%; /* Make the button take full width on smaller screens */
+}
+
+button:hover {
+  background-color: #DAD4B5;
+}
+
+.toggle-span {
+  font-size: medium;
+  margin-top: 10px;
+  margin-left: 60px;
+  padding: 10px;
+  color: #DAD4B5;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+.toggle-span:hover {
+  color: #F2E8C6;
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 768px) {
+  .form-container {
+    padding: 20px; /* Reduce padding for smaller screens */
+    max-width: 90%; /* Allow the form to be more flexible on smaller screens */
+  }
+
+  input {
+    font-size: 14px; /* Decrease input font size */
+  }
+
+  button {
+    font-size: 18px; /* Decrease button font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .form-container {
+    padding: 15px; /* Further reduce padding for very small screens */
+  }
+
+  .App-header {
+    font-size: calc(12px + 1vmin); /* Reduce the header font size */
+  }
+
+  input {
+    font-size: 12px; /* Decrease input font size further */
+  }
+
+  button {
+    font-size: 16px; /* Reduce button text size for smaller screens */
+    padding: 10px; /* Keep padding consistent */
+  }
+}
