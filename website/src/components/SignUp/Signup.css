@@ -1,0 +1,28 @@
+
+.password-strength {
+  font-size: 14px;
+  padding: 5px;
+  position: relative;
+}
+
+.strength-bar {
+  height: 4px;
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+.weak {
+  background-color: red;
+}
+
+.medium {
+  background-color: orange;
+}
+
+.strong {
+  background-color: green;
+}
+
+.very-strong {
+  background-color: darkgreen;
+}
